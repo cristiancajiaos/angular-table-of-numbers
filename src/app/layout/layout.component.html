@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Subcells</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Foo</td>
+      <td>
+        <table>
+          <tbody>
+            <tr>
+              <td *ngFor="let subCell of subCells">
+                <span *ngFor="let myNumber of myNumbers">
+                  <span *ngIf="subCell == myNumber">{{myNumber}}</span>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
